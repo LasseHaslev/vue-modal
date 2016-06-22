@@ -1,4 +1,4 @@
-# vue-modal
+# vue-modal-browserify
 Vue modal is a simple popup modal component for frontend framework vuejs
 
 ## Motivation
@@ -15,7 +15,7 @@ Vue.component({
   el: '#app',
   
   components: {
-    'modal': require( 'vue-modal' ),
+    'modal': require( 'vue-modal-browserify' ),
   },
   
 });
@@ -59,7 +59,7 @@ Vue.component({
   },
   
   components: {
-    'modal': require( 'vue-modal' ),
+    'modal': require( 'vue-modal-browserify' ),
   },
   
 });
@@ -96,7 +96,7 @@ $modal-close-content: 'X' !default;
 
 ## Installation
 
-Run ```npm install vue-modal --save``` in your project folder
+Run ```npm install vue-modal-browserify --save``` in your project folder
 
 
 ## Development
