@@ -6,7 +6,7 @@ Vue modal is a simple popup modal component for frontend framework vuejs
 Needed a simple and reusable modal for vuejs.
 
 ## Usage
-The modal stays hidden until it eather gets its ```open()``` triggered or receive ```OpenModal``` event.
+The modal stays hidden until it either gets its ```open()``` triggered or receive ```OpenModal``` event.
 
 #####First you have to include the component
 ```
