@@ -1,5 +1,5 @@
 {
-  "name": "vue-modal",
+  "name": "vue-modal-browserify",
   "version": "0.8.0",
   "description": "Vue modal is a simple popup modal component for frontend framework vuejs",
   "main": "src/vue-modal.js",
