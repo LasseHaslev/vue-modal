@@ -1,3 +1,23 @@
+/* Modal width */
+$modal-margin-top: 3% !default;
+$modal-responsive-width: 90% !default;
+$modal-width: 730px !default;
+
+/* Modal style */
+$modal-background-color: white !default;
+$modal-padding: 16px !default;
+$modal-border-radius: 10px !default;
+
+/* Modal backdrop */
+$modal-backdrop-color: black !default;
+$modal-backdrop-opacity: .725 !default;
+
+/* Modal close button */
+$modal-close-diameter: 25px !default;
+$modal-close-offset: .8 !default;
+$modal-close-background-color: $modal-background-color !default;
+$modal-close-content: 'X' !default;
+
 .Modal, .Modal__backdrop, .Modal__scrollable {
     position:fixed;
     top:0;
@@ -14,12 +34,12 @@
         cursor: pointer;
 
         position: absolute;
-        top: -10px;
-        right: -10px;
-        width: 25px;
-        height: 25px;
+        top: -$modal-close-diameter/2 * $modal-close-offset;
+        right: -$modal-close-diameter/2 * $modal-close-offset;
+        width: $modal-close-diameter;
+        height: $modal-close-diameter;
 
-        background-color: white;
+        background-color: $modal-close-background-color;
         border-radius: 50%;
         box-shadow: 0 0 8px #000;
 
@@ -36,46 +56,28 @@
             text-align:center;
 
             &:before {
-                content: 'X';
+                content: $modal-close-content;
             }
         }
     }
     &__content {
-        background-color: white;
-        border-radius: 10px;
-        padding: 16px;
+        background-color: $modal-background-color;
+        border-radius: $modal-border-radius;
+        padding: $modal-padding;
     }
     &__scrollable {
         overflow:auto;
     }
     &__backdrop {
         z-index: -1000;
-        background-color: black;
-        opacity: .725;
+        background-color: $modal-backdrop-color;
+        opacity: $modal-backdrop-opacity;
     }
     &__container {
         position:relative;
-        width: 90%;
-        max-width: 730px;
-        margin: 3% auto;
+        width: $modal-responsive-width;
+        max-width: $modal-width;
+        margin: $modal-margin-top auto;
         // @extend .Card
-        &__close {
-            padding: 0;
-            cursor: pointer;
-            background: 0 0;
-            border: 0;
-            -webkit-appearance: none;
-            
-            float:right;
-            font-size:21px;
-            font-weight: 700;
-            line-height: 1;
-            color: black;
-            text-shadow: 0 1px 0 white;
-            opacity: .2;
-            &:hover {;
-                opacity: .5;
-            }
-        }
     }
 }
