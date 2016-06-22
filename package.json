@@ -1,6 +1,6 @@
 {
   "name": "@lassehaslev/vue-modal",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Vue modal is a simple modal component for frontend framework vuejs",
   "main": "dist/build.js",
   "author": "Lasse S. Haslev <lasse@haslev.no>",
