@@ -12,28 +12,37 @@ module.exports = {
         this.open();
     },
 
+    events: {
+        'OpenModal'() {
+            this.open();
+        },
+        'CloseModal'() {
+            this.close();
+        },
+        'ToggleModal'() {
+            this.toggle();
+        },
+    },
+
     methods: {
         open: function() {
             this.isOpen = true;
             // Disable scroll for body
             document.body.classList.add('modal-open');
 
-            this.$dispatch( 'modal::open' );
+            this.$dispatch( 'ModalOpen' );
         },
         close: function() {
             this.isOpen = false;
             // Enable scroll for body
             document.body.classList.remove('modal-open');
 
-            this.$dispatch( 'modal::close' );
+            this.$dispatch( 'ModalClose' );
         },
-        toggleOpen: function() {
+        toggle: function() {
             this.isOpen = ! this.isOpen;
             this.isOpen ? this.open() : this.close();
         },
     },
 
-    components: {
-        // 'remove-button': require( '../elements/remove-button' ),
-    }
 }
