@@ -3,9 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>@lassehaslev/vue-modal</title>
+    <link rel="stylesheet" href="/dist/vue-modal.css" type="text/css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
     <app></app>
+    <modal v-ref:modal>Hello world</modal>
+
+    <button @click.prevent="$refs.modal.open">Open Modal</button>
     <script src="dist/build.js"></script>
   </body>
 </html>
