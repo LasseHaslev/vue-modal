@@ -12,7 +12,7 @@ Vue.component({
   el: '#app',
   
   components: {
-    'modal': require( '@lassehaslev/vue-modal' ),
+    'modal': require( 'vue-modal-browserify' ),
   },
   
 });
@@ -56,7 +56,7 @@ Vue.component({
   },
   
   components: {
-    'modal': require( '@lassehaslev/vue-modal' ),
+    'modal': require( 'vue-modal-browserify' ),
   },
   
 });
