@@ -5,11 +5,11 @@
   "main": "dist/build.js",
   "author": "Lasse S. Haslev <lasse@haslev.no>",
   "scripts": {
-    "watchify": "watchify -vd -p browserify-hmr -e src/main.js -o dist/build.js",
+    "watchify": "watchify -vd -p browserify-hmr -t [ stringify --extensions [.html .hbs] ] -e src/main.js -o dist/build.js",
     "serve": "http-server -c 1 -a localhost",
     "dev": "npm-run-all --parallel watchify serve",
-    "build": "cross-env NODE_ENV=production browserify -t [ stringify --extensions [.html .hbs] ] src/main.js | uglifyjs -c warnings=false -m > dist/build.js; sass src/styles/Modal.scss:dist/test.css",
-    "style": "node-sass --include-path scss src/styles/Modal.scss dist/test.css"
+    "build": "cross-env NODE_ENV=production browserify -t [ stringify --extensions [.html .hbs] ] src/main.js | uglifyjs -c warnings=false -m > dist/build.js",
+    "style": "node-sass --include-path scss src/styles/Modal.scss dist/styles/modal.css"
   },
   "repository": {
     "type": "git",

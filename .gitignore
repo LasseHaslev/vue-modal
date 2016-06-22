@@ -38,4 +38,4 @@ jspm_packages
 
 .sass-cache
 .DS_Store
-dist/build.js
+dist/
