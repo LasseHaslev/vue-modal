@@ -2,13 +2,15 @@
     <div class="Modal__backdrop"></div>
     <div class="Modal__scrollable">
 
-        <div class="Modal__content clearfix" @click.stop>
-            <div class="Card Position--relative">
-                <remove-button @click="close"></remove-button>
+        <div class="Modal__container clearfix" @click.stop>
+
+
+            <div class="Modal__content Position--relative">
+                <div class="Modal__CloseButton" @click.prevent="close()">
+                    <div class="Modal__CloseButton__icon">
+                    </div>
+                </div>
                 <div class="Card__content">
-                    <!-- <div class="Clearfix"> -->
-                        <!-- <button type="button" class="Modal__content__close" data-dismiss="modal" aria-label="Close" @click="close()"><span aria-hidden="true">×</span></button> -->
-                    <!-- </div> -->
                     <slot>
                         <p>One fine body…</p>
                     </slot>

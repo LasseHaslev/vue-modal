@@ -8,6 +8,10 @@ module.exports = {
         };
     },
 
+    ready() {
+        this.open();
+    },
+
     methods: {
         open: function() {
             this.isOpen = true;
@@ -30,6 +34,6 @@ module.exports = {
     },
 
     components: {
-        'remove-button': require( '../elements/remove-button' ),
+        // 'remove-button': require( '../elements/remove-button' ),
     }
 }

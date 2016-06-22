@@ -1,0 +1,81 @@
+.Modal, .Modal__backdrop, .Modal__scrollable {
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index: 99998;
+}
+.Modal {
+    &__CloseButton {
+
+        transition: all .8s;
+
+        cursor: pointer;
+
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 25px;
+        height: 25px;
+
+        background-color: white;
+        border-radius: 50%;
+        box-shadow: 0 0 8px #000;
+
+        &:hover {
+            box-shadow: 0 3px 12px #000;
+            transform: scale( 1.05 );
+        }
+
+        &__icon {
+            /* Vertical alicn */
+            position: relative;
+            top: 50%;
+            transform: translateY( -50% );
+            text-align:center;
+
+            &:before {
+                content: 'X';
+            }
+        }
+    }
+    &__content {
+        background-color: white;
+        border-radius: 10px;
+        padding: 16px;
+    }
+    &__scrollable {
+        overflow:auto;
+    }
+    &__backdrop {
+        z-index: -1000;
+        background-color: black;
+        opacity: .725;
+    }
+    &__container {
+        position:relative;
+        width: 90%;
+        max-width: 730px;
+        margin: 3% auto;
+        // @extend .Card
+        &__close {
+            padding: 0;
+            cursor: pointer;
+            background: 0 0;
+            border: 0;
+            -webkit-appearance: none;
+            
+            float:right;
+            font-size:21px;
+            font-weight: 700;
+            line-height: 1;
+            color: black;
+            text-shadow: 0 1px 0 white;
+            opacity: .2;
+            &:hover {;
+                opacity: .5;
+            }
+        }
+    }
+}
