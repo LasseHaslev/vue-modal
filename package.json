@@ -1,5 +1,5 @@
 {
-  "name": "@lassehaslev/vue-modal",
+  "name": "vue-modal-browserify",
   "version": "0.8.4",
   "description": "Vue modal is a simple modal component for frontend framework vuejs",
   "main": "dist/build.js",

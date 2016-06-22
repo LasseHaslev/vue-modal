@@ -1,4 +1,4 @@
-# @lassehaslev/vue-modal
+# vue-modal-browserify
 
 > Vue modal is a simple modal component for frontend framework vuejs
 
@@ -93,7 +93,7 @@ $modal-close-content: 'X' !default;
 
 ## Installation
 
-Run ```npm install @lassehaslev/vue-modal --save``` in your project folder
+Run ```npm install vue-modal-browserify --save``` in your project folder
 
 
 ## Development
