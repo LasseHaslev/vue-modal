@@ -25,7 +25,9 @@ Vue.component({
 ```
 <div id="app">
   <!-- Add modal component to view. Note: v-ref:modal is for calling function on modal, see below. -->
-  <modal v-ref:modal></modal>
+  <modal v-ref:modal>
+    Here comes the modal content
+  </modal>
   
   <!-- Open modal through open() function. Requires: v-ref: on modal -->
   <button @click.prevent="$refs.modal.open">Open modal with modal method<button>
@@ -40,7 +42,7 @@ The modal component dispatches events on open and close
 ```
 Vue.component({
 
-  template: '<modal></modal>',
+  template: '<modal>My modal content</modal>',
   
   ready: function() {
     // Open the modal with event
