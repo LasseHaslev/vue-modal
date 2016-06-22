@@ -1,0 +1,16 @@
+{
+  "name": "vue-modal",
+  "version": "0.8.0",
+  "description": "Vue modal is a simple popup modal for frontend framework vuejs",
+  "main": "src/vue-modal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "modal",
+    "popup",
+    "vuejs"
+  ],
+  "author": "Lasse S. Haslev <lasse@haslev.no>",
+  "license": "ISC"
+}
