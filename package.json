@@ -1,6 +1,6 @@
 {
   "name": "vue-modal-browserify",
-  "version": "0.8.8",
+  "version": "0.8.9",
   "description": "Vue modal is a simple modal component for frontend framework vuejs",
   "main": "src/components/Modal/Modal.js",
   "author": "Lasse S. Haslev <lasse@haslev.no>",
