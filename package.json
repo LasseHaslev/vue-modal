@@ -11,7 +11,7 @@
     "build-js": "cross-env NODE_ENV=production browserify -t [ stringify --extensions [.html .hbs] ] src/main.js | uglifyjs -c warnings=false -m > dist/build.js",
     "watch-js": "watch-run -p 'src/**' npm run browserify-hmr -t [ stringify --extensions [.html .hbs] ] -e src/main.js -o dist/build.js",
     "build-css": "node-sass --include-path scss src/styles/Modal.scss dist/styles/modal.css",
-    "watch-css": "node-sass -w --include-path scss src/styles/Modal.scss dist/styles/modal.css",
+    "watch-css": "node-sass -w --include-path scss src/styles/Modal.scss dist/styles/modal.css"
   },
   "repository": {
     "type": "git",
