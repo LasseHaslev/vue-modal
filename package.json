@@ -1,8 +1,8 @@
 {
   "name": "vue-modal-browserify",
-  "version": "0.8.14",
+  "version": "0.8.12",
   "description": "Vue modal is a simple modal component for frontend framework vuejs",
-  "main": "dist/Modal.common.js",
+  "main": "src/Components/Modal/Modal.js",
   "author": "Lasse S. Haslev <lasse@haslev.no>",
   "scripts": {
     "serve": "http-server -c 1 -a localhost",
@@ -12,7 +12,6 @@
     "watch-js": "watch-run -p 'src/**' npm run browserify-hmr -t [ stringify --extensions [.html .hbs] ] -e src/main.js -o dist/build.js",
     "build-css": "node-sass --include-path scss src/styles/Modal.scss dist/styles/modal.css",
     "watch-css": "node-sass -w --include-path scss src/styles/Modal.scss dist/styles/modal.css",
-    "production": "cross-env NODE_ENV=production browserify -t [ stringify --extensions [.html .hbs] ] src/components/Modal/Modal.js | uglifyjs -c warnings=false -m > dist/Modal.common.js"
   },
   "repository": {
     "type": "git",
@@ -48,6 +47,7 @@
   },
   "browserify": {
     "transform": [
+      "vueify",
       "babelify"
     ]
   },
