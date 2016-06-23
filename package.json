@@ -9,7 +9,7 @@
     "dev": "npm-run-all --parallel watch-js watch-css serve",
     "build": "npm run build-js & npm run build-css",
     "build-js": "cross-env NODE_ENV=production browserify -t [ stringify --extensions [.html .hbs] ] src/main.js | uglifyjs -c warnings=false -m > dist/build.js",
-    "watch-js": "watchify -vd -p browserify-hmr -t [ stringify --extensions [.html .hbs] ] -e src/main.js -o dist/build.js",
+    "watch-js": "watch-run -p 'src/**' npm run browserify-hmr -t [ stringify --extensions [.html .hbs] ] -e src/main.js -o dist/build.js",
     "build-css": "node-sass --include-path scss src/styles/Modal.scss dist/styles/modal.css",
     "watch-css": "node-sass -w --include-path scss src/styles/Modal.scss dist/styles/modal.css"
   },
@@ -42,6 +42,7 @@
     "stringify": "^5.1.0",
     "uglify-js": "^2.5.0",
     "vueify": "^8.5.2",
+    "watch-run": "^1.2.4",
     "watchify": "^3.4.0"
   },
   "browserify": {
