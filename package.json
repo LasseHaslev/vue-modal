@@ -24,6 +24,7 @@
   ],
   "license": "ISC",
   "dependencies": {
+    "brfs": "^1.4.3",
     "vue": "^1.0.0"
   },
   "devDependencies": {
