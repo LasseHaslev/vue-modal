@@ -1,0 +1,53 @@
+/* Modal width */
+/* Modal style */
+/* Modal backdrop */
+/* Modal close button */
+.Modal, .Modal__backdrop, .Modal__scrollable {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99998; }
+
+.Modal__CloseButton {
+  transition: all .8s;
+  cursor: pointer;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #000; }
+  .Modal__CloseButton:hover {
+    box-shadow: 0 3px 12px #000;
+    transform: scale(1.05); }
+  .Modal__CloseButton__icon {
+    /* Vertical alicn */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center; }
+    .Modal__CloseButton__icon:before {
+      content: "X"; }
+
+.Modal__content {
+  background-color: white;
+  border-radius: 10px;
+  padding: 16px; }
+
+.Modal__scrollable {
+  overflow: auto; }
+
+.Modal__backdrop {
+  z-index: -1000;
+  background-color: black;
+  opacity: 0.725; }
+
+.Modal__container {
+  position: relative;
+  width: 90%;
+  max-width: 730px;
+  margin: 3% auto; }
