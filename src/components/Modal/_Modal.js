@@ -1,6 +1,6 @@
 module.exports = {
 
-    template: '<div v-if="isOpen" @click="toggle" transition="fade" class="Modal">    <div class="Modal__backdrop"></div>    <div class="Modal__scrollable">        <div class="Modal__container clearfix" @click.stop>            <div class="Modal__content Position--relative">                <div class="Modal__CloseButton" @click.prevent="close()">                    <div class="Modal__CloseButton__icon">                    </div>                </div>                <div class="Card__content">                    <slot>                        <p>One fine body…</p>                    </slot>                </div>            </div>        </div>    </div></div>',
+    template: require('./modal.template.html'),
 
     data: function() {
         return {

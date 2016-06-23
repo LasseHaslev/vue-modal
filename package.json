@@ -48,7 +48,6 @@
   },
   "browserify": {
     "transform": [
-      "vueify",
       "babelify"
     ]
   },
