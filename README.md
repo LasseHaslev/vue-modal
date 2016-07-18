@@ -1,24 +1,27 @@
-# vue-modal-browserify
+# @lassehaslev/vue-modal
 
 > Vue modal is a simple modal component for frontend framework vuejs
+
+## Installation
+Run ```npm install @lassehaslev/vue-modal --save``` in your project folder
 
 ## Usage
 The modal stays hidden until it either gets its ```open()``` triggered or receive ```OpenModal``` event.
 
-#####First you have to include the component
+##### First you have to include the component
 ```
 Vue.component({
 
   el: '#app',
   
   components: {
-    'modal': require( 'vue-modal-browserify' ),
+    'modal': require( '@lassehaslev/vue-modal' ),
   },
   
 });
 ```
 
-#####Then you need to include the element in the view
+##### Then you need to include the element in the view
 ```
 <div id="app">
   <!-- Add modal component to view. Note: v-ref:modal is for calling function on modal, see below. -->
@@ -34,7 +37,7 @@ Vue.component({
 </div>
 ```
 
-####Events
+#### Events
 The modal component dispatches events on open and close
 ```
 Vue.component({
@@ -56,7 +59,7 @@ Vue.component({
   },
   
   components: {
-    'modal': require( 'vue-modal-browserify' ),
+    'modal': require( '@lassehaslev/vue-modal' ),
   },
   
 });
@@ -91,15 +94,7 @@ $modal-close-background-color: $modal-background-color !default;
 $modal-close-content: 'X' !default;
 ```
 
-## Installation
-
-Run ```npm install vue-modal-browserify --save``` in your project folder
-
-
 ## Development
-
-## Build Setup
-
 ``` bash
 # install dependencies
 npm install
