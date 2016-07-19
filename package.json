@@ -5,8 +5,10 @@
   "scripts": {
     "watchify": "watchify -vd -p browserify-hmr -e src/main.js -o dist/build.js",
     "serve": "http-server -c 1 -a localhost",
-    "dev": "npm-run-all --parallel watchify serve",
-    "build": "cross-env NODE_ENV=production browserify src/main.js | uglifyjs -c warnings=false -m > dist/build.js"
+    "dev": "npm-run-all --parallel watchify serve style",
+    "build": "cross-env NODE_ENV=production browserify src/main.js | uglifyjs -c warnings=false -m > dist/build.js",
+    "style": "stylus -c src/styles/style.styl -o dist/",
+    "prepublish": "npm run build; npm run style;"
   },
   "dependencies": {
     "vue": "^1.0.0"
