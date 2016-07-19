@@ -1,4 +1,3 @@
-<style lang="sass" src="styles/style.scss"></style>
 <template>
 <div v-if="isOpen" @click="toggle" transition="Modal--Fade" class="Modal">
     <div class="Modal__backdrop"></div>
