@@ -8,44 +8,18 @@ Run ```npm install @lassehaslev/vue-modal --save``` in your project folder
 ## Usage
 The modal stays hidden until it either gets its ```open()``` triggered or receive ```OpenModal``` event.
 
+
+Load modal
+``` js
+import Modal from './Modal.vue';
+Vue.component( 'modal', Modal );
+```
+
+
+
 ``` html
-<template>
-<div id="app">
-    <!-- Add modal component to view. Note: v-ref:modal is for calling function on modal, see below. -->
-    <modal v-ref:modal>
-        Here comes the modal content
-    </modal>
-
-    <!-- Open modal through open() function. Requires: v-ref: on modal -->
-    <button @click.prevent="$refs.modal.open">Open modal with modal method<button>
-
-    <!-- Open modal through 'OpenModal' event. -->
-    <button @click.prevent="$broadcast('OpenModal')">Open modal with external event.<button>
-</div>
-</template>
-
-<script>
-export default {
-    ready: function() {
-        // Open the modal with event
-        this.$broadcast( 'OpenModal' );
-    },
-    
-    events: {
-        'ModelOpen': function() {
-            alert('ModelOpen');
-        },
-        'ModelClose': function() {
-            alert('ModelClose');
-        },
-    },
-    
-    components: {
-        'modal': require( '@lassehaslev/vue-modal' ),
-    }
-
-}
-</script>
+<modal ref="modal">Hello world</modal>
+<button @click.prevent="$refs.modal.open">Open modal with event</button>
 ```
 
 #### Styles

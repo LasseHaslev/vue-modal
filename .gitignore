@@ -1,6 +1,4 @@
 .DS_Store
 node_modules/
-dist/build.js
-dist/style.css
+dist/
 npm-debug.log
-tags

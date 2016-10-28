@@ -1,7 +1,16 @@
 import Vue from 'vue'
-import Modal from './Modal.vue'
+import App from './App'
 
+window.Vue = Vue;
+
+import Modal from './Modal.vue';
+Vue.component( 'modal', Modal );
+
+require( '../dist/style.css' );
+
+/* eslint-disable no-new */
 new Vue({
-  el: 'body',
-  components: { Modal }
+  el: '#app',
+  template: '<App/>',
+  components: { App }
 })
