@@ -1,4 +1,5 @@
 import BaseModal from './BaseModal';
+
 export default {
     template: `
     <div v-show="isShowingModal" class="modal is-active">

@@ -1,3 +1,9 @@
+import Vue from 'vue';
+import ModalController from './ModalController';
+
+// Set global controller
+window.ModalController = new Vue(ModalController);
+
 export default {
 
     data() {
@@ -9,14 +15,18 @@ export default {
 
     methods: {
         onModalOpen() {
-            this.isShowingModal = false;
+
         },
+        onModalClose() {},
 
         open() {
             this.onModalOpen();
+            window.ModalController.add( this );
             this.isShowingModal = true;
         },
         close() {
+            this.onModalClose();
+            window.ModalController.remove( this );
             this.isShowingModal = false;
         },
     }
