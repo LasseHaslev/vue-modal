@@ -7,7 +7,10 @@
                 </h3>
             </div>
         </section>
+
         <simple-modal></simple-modal>
+        <modal-controller></modal-controller>
+
         <div class="hero is-primary">
             <div class="hero-body">
                 <div class="container is-fluid">
@@ -20,6 +23,7 @@
 
 <script>
 import SimpleModal from './tutorials/SimpleModal';
+import ModalController from './tutorials/ModalController';
 export default {
     name: 'app',
     data () {
@@ -28,6 +32,7 @@ export default {
     },
     components: {
         SimpleModal,
+        ModalController,
     }
 }
 </script>
