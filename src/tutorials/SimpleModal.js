@@ -11,7 +11,7 @@ export default {
                     </h3>
                     <h4 class="subtitle is-4">Open a simple logic with bulma</h4>
                     <p>If <a href="http://bulma.io/">Bulma.io</a> does not fit your needs, you can create a simular file like this package <a href="https://github.com/LasseHaslev/vue-modal/blob/master/src/components/Modal.js">Modal.js</a>.</p>
-                    <p> Make shure you add the <a href="https://github.com/LasseHaslev/vue-modal/blob/master/src/components/Modal.js">BaseModal.js</a> as a mixin, and add events for click and close.</p>
+                    <p> Make shure you add the <a href="https://github.com/LasseHaslev/vue-modal/blob/master/src/components/BaseModal.js">BaseModal.js</a> as a mixin, and add events for click and close.</p>
                 </div>
             </section>
             <section class="hero is-light">
