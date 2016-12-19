@@ -1,6 +1,7 @@
 # @lassehaslev/vue-modal
 
 > Simple Modal logic with Vue2
+
 ## Installation
 Run ```npm install @lassehaslev/vue-modal --save``` in your project folder
 
