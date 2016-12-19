@@ -9,14 +9,11 @@ export default {
     data() {
         return {
             isShowingModal: false,
-            isLoading: false,
         }
     },
 
     methods: {
-        onModalOpen() {
-
-        },
+        onModalOpen() {},
         onModalClose() {},
 
         open() {
