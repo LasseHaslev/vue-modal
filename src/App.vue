@@ -2,19 +2,27 @@
     <div id="app">
         <div class="section">
             <div class="container is-fluid has-text-centered">
-                <vue-modal ref="modal">
-                    <div class="box">
-                        <h1 class="title">Hello world</h1>
-                    </div>
-                </vue-modal>
                 <a @click="open" class="button is-primary is-large" href="#">Open modal</a>
+                <h1 class="title">Modal</h1>
+            </div>
+            <modal ref="modal">
+                <div class="box">
+                    <h1 class="title">Hello world</h1>
+                </div>
+            </modal>
+        </div>
+        <div class="hero is-primary">
+            <div class="hero-body">
+                <div class="container is-fluid">
+                    <p>Hello world</p>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import VueModal from './components/Modal';
+import { Modal } from './index';
 export default {
     name: 'app',
     data () {
@@ -27,7 +35,7 @@ export default {
         }
     },
     components: {
-        VueModal,
+        Modal,
     }
 }
 </script>
