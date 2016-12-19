@@ -36,7 +36,7 @@ export default {
 ## Extend / Build your own!
 Just include the BaseModal class as a mixin, and you are good to call ```open``` and ```close``` and checking ```isShowingModal``` boolean.
 ```js
-import BaseModal from '@lassehaslev/hjh';
+import BaseModal from '@lassehaslev/vue-modal';
 
 export default {
     template: `
