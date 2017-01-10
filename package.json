@@ -1,7 +1,7 @@
 {
   "name": "@lassehaslev/vue-modal",
   "description": "Simple Modal logic with vue",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "main": "src/index.js",
   "author": "Lasse S. Haslev <lasse@haslev.no>",
   "repository": {
