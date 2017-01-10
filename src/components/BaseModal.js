@@ -20,11 +20,13 @@ export default {
             this.onModalOpen();
             window.ModalController.add( this );
             this.isShowingModal = true;
+            this.$emit( 'open' );
         },
         close() {
             this.onModalClose();
             window.ModalController.remove( this );
             this.isShowingModal = false;
+            this.$emit( 'close' );
         },
     }
 }
